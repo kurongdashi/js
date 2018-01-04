@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自动获取焦点</title>
+</head>
+<script>
+    window.onload=function () {
+        var text=document.getElementById("txt");
+//        focus 获取焦点 onblur失去焦点
+        text.focus();
+        text.onmouseenter=function () {
+            this.select();
+        }
+        text.onblur=function () {
+            
+        }
+    }
+</script>
+<body>
+姓名：<input type="text" id="txt">
+</body>
+</html>

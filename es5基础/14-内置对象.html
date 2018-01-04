@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内置对象</title>
+</head>
+<script>
+    /**
+     * 常用内置对象 内置对象需要创建 new Object()
+     * argument：获取参数
+     * Error；异常对象
+     * navigator:导航对象
+     * Array：数组
+     */
+    window.onload=function () {
+//        1 导航对象
+//        window.location.href="http://www.baidu.com";
+//        2 时间对象
+        var date=new Date(); //Fri Sep 08 2017 11:03:50 GMT+0800 (中国标准时间)
+
+        console.log(date)
+//        获得距离1970年的毫秒数
+        console.log(date.getTime());//1504839865797
+        console.log(date.valueOf());//1504839865797
+//
+////        console.log(Date.now());
+////        获取日期1-31
+//        console.log(date.getDate());
+////        星期0-6
+//        console.log(date.getDay());
+////        月0-11
+//        console.log(date.getMonth());
+////       年
+//        console.log(date.getFullYear());
+//        console.log(date.getHours());
+//        console.log(date.getMinutes());
+//        console.log(date.getSeconds());
+//        new 对象时传入自定义时间字符串，则获取到自定义的时间对象
+        var cur=new Date('2017/9/7');
+        console.log(cur);
+    }
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组的常用方法</title>
+</head>
+<body>
+<script>
+/*
+    数组相连concat()
+ */
+  function conc(){
+      var a=[1,2];
+      var b=[3,4];
+      var c=a.concat(b);
+      console.log(c);
+  }
+/**
+ * 数组转字符串 join(符号)：将数字按分割符号转成字符串
+ */
+function tostr(){
+    var a=['hello',2,4];
+//    不写参数，默认为 ,
+    a=a.join();
+    console.log(a);
+}
+tostr();
+/**
+ * 分割字符串split
+ */
+function spl() {
+    var a='hello-world-ni-hao';
+    a=a.split('-');
+    console.log(a);
+}
+spl();
+//排序
+function order(){
+    var a=[1,34,5,52,3,4];
+//    参数排序函数,没有传自定义排序函数，则默认按字母顺序排序 a b c d
+    a=a.sort(function mat(a,b) {
+//    如果a>b则返回>0的数，否则返回小于0，或者等于0
+        return a-b;
+    });
+    console.log(a);
+}
+order();
+//颠倒顺序
+function dian() {
+    var a=[1,2,3,4,5];
+    a.reverse();
+    console.log(a);
+}
+dian();
+//数组截取
+function selc(){
+    var a=[1,2,3,4,5];
+//    参数start（必须） ,end（可选） 默认从0 开始，如果为-1,-xx,从尾开始
+    a=a.slice(2);
+    console.log(a);
+}
+selc();
+
+</script>
+</body>
+</html>

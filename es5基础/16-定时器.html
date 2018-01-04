@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时器</title>
+</head>
+<style>
+    span{
+        color: #FE98D9;
+    }
+</style>
+<body>
+<p><span id="time">5</span>s后去百度</p>
+<script>
+    var time=document.getElementById('time');
+    var count=5;
+    var timer=setInterval(function () {
+        count--;
+        time.innerHTML=count;
+        if(count==0){
+            clearInterval(timer);
+            window.location.href='http://www.baidu.com';
+        }
+
+    },1000)
+
+</script>
+</body>
+</html>

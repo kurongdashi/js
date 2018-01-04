@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    if(''===''){
+        console.log('空');
+    }
+    console.log(''==null);
+    console.log(typeof {})
+    console.log(typeof '')
+    console.log(typeof null)
+
+
+    console.log(!'');
+    function urlParse() {
+        let url = window.location.search;
+        console.log(url);
+        let reg = /[?&][^?&]+=[^?&]+/g;
+        let arr = url.match(reg);
+        let obj = {};
+        // [?id=123,&a=b]
+        if (arr) {
+            arr.forEach((item) => {
+                let tempArr = item.substring(1).split('=');
+                let key = decodeURIComponent(tempArr[0]);
+                let val = decodeURIComponent(tempArr[1]);
+                obj[key]=val;
+
+            })
+        }
+        return obj;
+    }
+//    console.log(urlParse());
+</script>
+</html>

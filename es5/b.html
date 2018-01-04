@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test B</title>
+</head>
+<body>
+<h1>测试网页B 测试网页间通信、共享cookie、storage</h1>
+</body>
+<script>
+    document.domain='localhost';
+    var c=document.cookie;
+
+    var l=localStorage.getItem('key1');
+    console.log(c); //b.html:13 test1=hello; test=helloA
+    console.log(l);
+
+//    监听来自a的消息
+    window.addEventListener('message',function (e) {
+       console.log('-------接收到了来自a窗体消息--------');
+       console.log(e.data);
+    },false);
+</script>
+</html>
